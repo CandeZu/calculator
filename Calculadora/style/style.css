@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(45deg, #f3ec78, #af4261);
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.calculator{
+    height: auto;
+    width: auto;
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgb(187, 130, 130);
+    background-color: #fff;
+    
+    #display{
+        color: black;
+        margin: 0 10px;
+        height: 120px;
+        width: auto;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        font-size: 30px;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+    #clear{
+        background-color: #ebe6e8;
+        color: #e96a6a;
+    }
+    .btn-number{
+        background-color: #c0bef9;
+        color: #000000;
+    }
+    .btn-operator{
+        background-color: #f9c0c0;
+        color: #c22424;
+    }
+    .btn-equal{
+        background-color: #cbff91;
+        color: #000000;
+        height: 130px;
+    }
+    &.dark{
+        background-color: #000000;
+        #display{
+            color: #fff;
+        }
+        #clear{
+            background-color: #734eec;
+            color: #fff;
+        }
+        .btn-equal{
+            background-color: #eb4d21;
+            color: #fff;
+        }
+        .btn-number{
+            background-color: #52ba50;
+            color: #fff;
+        }
+        .btn-operator{
+            background-color: #ebe847;
+            color: #ff00cc;
+        }
+    }
+  
+}
+
+.theme-toggler{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1;
+    &::before{
+        position: absolute;
+        content: "";
+        font-family: "Font Awesome 5 Free";
+        height: 30px;
+        width: 30px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        z-index: -1;
+        background-color: #333;
+
+    }
+    box-shadow: 0 0 10px rgb(187, 130, 130);
+
+}
+
+.theme-toggler .active{
+    color: #333;
+    &::before{
+        background-color: #fff;
+    }
+}
+
+button{
+    height: 60px;
+    width: 60px;
+    border: 0;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+
+
